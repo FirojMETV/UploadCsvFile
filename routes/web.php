@@ -21,3 +21,4 @@ Route::get('/', function () {
 Route::get('/upload',[CsvController::class,'showForm']);
 Route::post('/upload',[CsvController::class,'upload'])->name('upload');
 Route::get('/csv-data',[CsvController::class,'show'])->name('csv.show');
+Route::get('/csvData',[CsvController::class,'PaginationData']);

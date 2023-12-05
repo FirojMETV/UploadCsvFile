@@ -66,4 +66,10 @@ class CsvController extends Controller
         $csvData = CsvData::all();
         return view('show',compact('csvData'));
     }
+    public function PaginationData(Request $request){
+        $page =$request->input('page',1);
+        $perpage = 10;
+        $csvDaTa = CsvData::paginate($perpage,['*'],'page',$page);
+        return response()->json($csvDaTa);
+    }
 }

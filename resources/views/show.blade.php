@@ -8,6 +8,23 @@
 <html>
 <head>
     <title>All CSV Data</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 100%;
+
+        }
+        th,td{
+            border:1px solid #f3c5c5;
+            padding: :8px;
+            text-align:left;
+            color:blue;
+
+        }
+        th{
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
 
@@ -64,6 +81,7 @@
         </tr>
     @endforeach
 </table>
+<button id="load-more">Load More</button>
 
 </body>
 </html>
